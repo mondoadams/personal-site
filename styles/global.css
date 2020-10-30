@@ -1,0 +1,97 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: var(--font-serif);
+	background: var(--white);
+}
+html[data-theme="dark"] {
+	background: var(--black);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.font-serif em {
+	font-family: "Canela-LightItalic";
+	font-weight: normal;
+	font-style: normal;
+}
+
+.font-serif strong {
+	font-family: "Canela-Medium";
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Canela-Light";
+	src: url("/fonts/Canela-Light.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Canela-Regular";
+	src: url("/fonts/Canela-Regular.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Canela-LightItalic";
+	src: url("/fonts/Canela-LightItalic.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Canela-Medium";
+	src: url("/fonts/Canela-Medium.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Canela-MediumItalic";
+	src: url("/fonts/Canela-MediumItalic.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Ney";
+	src: url("/fonts/Ney-46-Bold.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+:root {
+	--white: #f3f0ec;
+	--textblack: #232323;
+
+	/* fonts */
+	--font-sans: "Ney";
+
+	--font-serif: "Canela-Light";
+
+	/* light theme */
+	--background: var(--white);
+	--foreground: var(--textblack);
+
+	--primary: #77855c;
+	--accent: #cb6a39;
+	--black: #0b0b0c;
+}
+
+[data-theme="dark"] {
+	/* dark theme */
+	--background: var(--textblack);
+	--foreground: var(--white);
+}

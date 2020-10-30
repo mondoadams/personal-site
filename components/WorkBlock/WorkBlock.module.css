@@ -1,0 +1,57 @@
+.root {
+    @apply border-t-0.5 border-gray-800;
+    transition: 0.2s;
+}
+
+.root:hover {
+    @apply bg-primary;
+}
+
+.content {
+    @apply max-w-6xl m-auto flex flex-row h-32 items-center px-8;
+}
+
+.number {
+    @apply text-2xl mr-2;
+}
+
+.role {
+  @apply font-sans pl-2;
+  font-size: 0.62rem;
+}
+
+.project {
+    @apply text-2xl antialiased ml-10;
+}
+
+@screen sm {
+  .role {
+    @apply text-xs
+  }
+}
+
+@screen md {
+  .project {
+    @apply text-3xl;
+  }
+}
+
+@screen lg {
+  .project {
+    @apply text-5xl;
+  }
+}
+
+
+.client {
+    @apply text-base tracking-wide ml-auto text-right;
+    font-family: "Canela-LightItalic";
+}
+
+[data-theme="dark"] .root {
+    @apply text-white border-black;
+}
+
+[data-theme="dark"] .root:hover {
+    @apply bg-primary text-white;
+}
