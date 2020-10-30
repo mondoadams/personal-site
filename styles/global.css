@@ -16,11 +16,15 @@ a {
 }
 
 :root {
-	--background: white;
-	--foreground: black;
+	--white: white;
+	--black: #121212;
+	/* light theme */
+	--background: var(--white);
+	--foreground: var(--black);
 }
 
 [data-theme="dark"] {
-	--background: black;
-	--foreground: white;
+	/* dark theme */
+	--background: var(--black);
+	--foreground: var(--white);
 }
