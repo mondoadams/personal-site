@@ -1,0 +1,7 @@
+/* eslint-disable */
+
+.root {
+	justify-content: center;
+	align-items: center;
+	@apply flex flex-col min-h-screen;
+}
