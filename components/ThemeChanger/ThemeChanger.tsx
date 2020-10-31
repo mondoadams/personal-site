@@ -5,7 +5,7 @@ export default function ThemeChanger() {
 
 	return (
 		<div>
-			<div>The current theme is: {theme}</div>
+			{theme === "light" ? <div>Light</div> : <div>Dark</div>}
 			<button onClick={() => setTheme("light")}>Light Mode</button>
 			<button onClick={() => setTheme("dark")}>Dark Mode</button>
 		</div>
