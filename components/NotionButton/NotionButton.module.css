@@ -1,0 +1,15 @@
+.root {
+	@apply px-6 py-2 bg-foreground text-background rounded-sm text-sm
+    transition
+    duration-200
+    ease-in-out
+    font-sans
+    border-0.5
+    border-white
+    shadow-md
+    font-medium;
+}
+
+html[data-theme="dark"] .root {
+	@apply bg-purple-600 text-cool-gray-200;
+}
