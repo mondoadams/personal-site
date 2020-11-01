@@ -1,19 +1,16 @@
 .root {
-	@apply px-6 py-2 bg-foreground text-background rounded-md text-sm
-    transition
-    duration-200
-    ease-in-out
-    font-sans
-    border-0.5
-    border-white
-    shadow-md
-    font-medium;
+	@apply px-6 py-2
+    rounded-md
+    text-sm font-sans
+    transition duration-200 ease-in-out
+    font-medium
+    shadow-md;
 
-	&:hover {
-		@apply bg-gray-50;
-	}
+	@apply bg-gray-100
+    text-gray-800;
 }
 
-html[data-theme="dark"] .root {
-	@apply bg-purple-600 text-cool-gray-200;
+[data-theme="dark"] .root {
+	@apply bg-gray-800
+    text-blue-50;
 }

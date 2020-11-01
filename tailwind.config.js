@@ -5,8 +5,17 @@ module.exports = {
 		removeDeprecatedGapUtilities: true,
 		purgeLayersByDefault: true,
 	},
-	purge: ["./components/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
+	purge: {
+		content: [
+			"./components/**/*.{js,ts,jsx,tsx}",
+			"./pages/**/*.{js,ts,jsx,tsx}",
+		],
+		options: {
+			whitelist: ['html[data-theme="dark"]'],
+		},
+	},
 	theme: {
+		darkSelector: 'html[data-theme="dark"]',
 		extend: {
 			colors: {
 				background: "var(--background)",
@@ -20,12 +29,13 @@ module.exports = {
 	variants: {
 		backgroundColor: [
 			"responsive",
-			"hover",
-			"focus",
 			"dark",
+			"hover",
 			"dark-hover",
+			"focus",
 			"dark-focus",
 		],
+		// backgroundColor: ({ after }) => after(["dark", "dark-hover", "dark-focus"]),
 		textColor: [
 			"responsive",
 			"hover",
@@ -45,30 +55,31 @@ module.exports = {
 	},
 	plugins: [
 		require("@tailwindcss/ui"),
-		plugin(function ({ addVariant, e }) {
-			addVariant("dark", ({ modifySelectors, separator }) => {
-				modifySelectors(({ className }) => {
-					return `html[data-theme="dark"] .${e(`dark${separator}${className}`)}`
-				})
-			})
-		}),
-		plugin(function ({ addVariant, e }) {
-			addVariant("dark-hover", ({ modifySelectors, separator }) => {
-				modifySelectors(({ className }) => {
-					return `html[data-theme="dark"] .${e(
-						`dark-hover${separator}${className}`
-					)}:hover`
-				})
-			})
-		}),
-		plugin(function ({ addVariant, e }) {
-			addVariant("dark-focus", ({ modifySelectors, separator }) => {
-				modifySelectors(({ className }) => {
-					return `html[data-theme="dark"] .${e(
-						`dark-focus${separator}${className}`
-					)}:focus`
-				})
-			})
-		}),
+		require("tailwindcss-dark-mode")(),
+		// plugin(function ({ addVariant, e }) {
+		// 	addVariant("dark", ({ modifySelectors, separator }) => {
+		// 		modifySelectors(({ className }) => {
+		// 			return `html[data-theme="dark"] .${e(`dark${separator}${className}`)}`
+		// 		})
+		// 	})
+		// }),
+		// plugin(function ({ addVariant, e }) {
+		// 	addVariant("dark-hover", ({ modifySelectors, separator }) => {
+		// 		modifySelectors(({ className }) => {
+		// 			return `html[data-theme="dark"] .${e(
+		// 				`dark-hover${separator}${className}`
+		// 			)}:hover`
+		// 		})
+		// 	})
+		// }),
+		// plugin(function ({ addVariant, e }) {
+		// 	addVariant("dark-focus", ({ modifySelectors, separator }) => {
+		// 		modifySelectors(({ className }) => {
+		// 			return `html[data-theme="dark"] .${e(
+		// 				`dark-focus${separator}${className}`
+		// 			)}:focus`
+		// 		})
+		// 	})
+		// }),
 	],
 }

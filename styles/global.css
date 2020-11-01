@@ -17,7 +17,7 @@ a {
 
 :root {
 	--white: white;
-	--black: #121212;
+	--black: #060b1a;
 	/* light theme */
 	--background: var(--white);
 	--foreground: var(--black);
