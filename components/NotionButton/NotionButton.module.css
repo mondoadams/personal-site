@@ -1,5 +1,5 @@
 .root {
-	@apply px-6 py-2 bg-foreground text-background rounded-sm text-sm
+	@apply px-6 py-2 bg-foreground text-background rounded-md text-sm
     transition
     duration-200
     ease-in-out
@@ -8,6 +8,10 @@
     border-white
     shadow-md
     font-medium;
+
+	&:hover {
+		@apply bg-gray-50;
+	}
 }
 
 html[data-theme="dark"] .root {
