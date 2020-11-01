@@ -7,7 +7,7 @@ export default function Home() {
 	return (
 		<div className={styles.root}>
 			<h1
-				className={`bg-teal-400 text-2xl hover:bg-teal-700 dark:bg-white dark:text-teal-400 dark-hover:bg-gray-400`}
+				className={`bg-teal-400 text-2xl hover:bg-teal-700 dark:bg-white dark:text-teal-400 dark-hover:bg-gray-500`}
 			>
 				Joe Adams
 			</h1>

@@ -18,9 +18,30 @@ module.exports = {
 		},
 	},
 	variants: {
-		backgroundColor: ({ after }) => after(["dark", "dark-hover"]),
-		textColor: ({ after }) => after(["dark"]),
-		borderColor: ({ after }) => after(["dark"]),
+		backgroundColor: [
+			"responsive",
+			"hover",
+			"focus",
+			"dark",
+			"dark-hover",
+			"dark-focus",
+		],
+		textColor: [
+			"responsive",
+			"hover",
+			"focus",
+			"dark",
+			"dark-hover",
+			"dark-focus",
+		],
+		borderColor: [
+			"responsive",
+			"hover",
+			"focus",
+			"dark",
+			"dark-hover",
+			"dark-focus",
+		],
 	},
 	plugins: [
 		require("@tailwindcss/ui"),
@@ -37,6 +58,15 @@ module.exports = {
 					return `html[data-theme="dark"] .${e(
 						`dark-hover${separator}${className}`
 					)}:hover`
+				})
+			})
+		}),
+		plugin(function ({ addVariant, e }) {
+			addVariant("dark-focus", ({ modifySelectors, separator }) => {
+				modifySelectors(({ className }) => {
+					return `html[data-theme="dark"] .${e(
+						`dark-focus${separator}${className}`
+					)}:focus`
 				})
 			})
 		}),
