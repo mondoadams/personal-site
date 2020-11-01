@@ -1,3 +1,5 @@
+const plugin = require("tailwindcss/plugin")
+
 module.exports = {
 	future: {
 		removeDeprecatedGapUtilities: true,
@@ -15,6 +17,28 @@ module.exports = {
 			},
 		},
 	},
-	variants: {},
-	plugins: [require("@tailwindcss/ui")],
+	variants: {
+		backgroundColor: ({ after }) => after(["dark", "dark-hover"]),
+		textColor: ({ after }) => after(["dark"]),
+		borderColor: ({ after }) => after(["dark"]),
+	},
+	plugins: [
+		require("@tailwindcss/ui"),
+		plugin(function ({ addVariant, e }) {
+			addVariant("dark", ({ modifySelectors, separator }) => {
+				modifySelectors(({ className }) => {
+					return `html[data-theme="dark"] .${e(`dark${separator}${className}`)}`
+				})
+			})
+		}),
+		plugin(function ({ addVariant, e }) {
+			addVariant("dark-hover", ({ modifySelectors, separator }) => {
+				modifySelectors(({ className }) => {
+					return `html[data-theme="dark"] .${e(
+						`dark-hover${separator}${className}`
+					)}:hover`
+				})
+			})
+		}),
+	],
 }

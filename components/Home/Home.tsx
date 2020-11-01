@@ -6,7 +6,11 @@ import styles from "./Home.module.css"
 export default function Home() {
 	return (
 		<div className={styles.root}>
-			<h1 className={`bg-teal-400 text-2xl`}>Joe Adams</h1>
+			<h1
+				className={`bg-teal-400 text-2xl hover:bg-teal-700 dark:bg-white dark:text-teal-400 dark-hover:bg-gray-400`}
+			>
+				Joe Adams
+			</h1>
 			<span>This is the home component</span>
 			<ThemeChanger />
 			<NotionButton>Click here to view in Notion</NotionButton>
