@@ -2,8 +2,7 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-family: var(--font-serif);
 }
 
 a {
@@ -15,9 +14,69 @@ a {
 	box-sizing: border-box;
 }
 
+.font-serif em {
+	font-family: "Canela-LightItalic";
+	font-weight: normal;
+	font-style: normal;
+}
+
+.font-serif strong {
+	font-family: "Canela-Medium";
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Canela-Light";
+	src: url("/fonts/Canela-Light.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Canela-Regular";
+	src: url("/fonts/Canela-Regular.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Canela-LightItalic";
+	src: url("/fonts/Canela-LightItalic.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Canela-Medium";
+	src: url("/fonts/Canela-Medium.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Canela-MediumItalic";
+	src: url("/fonts/Canela-MediumItalic.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Ney";
+	src: url("/fonts/Ney-46-Bold.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+}
+
 :root {
-	--white: white;
-	--black: #060b1a;
+	--white: #eeeeee;
+	--black: #040404;
+
+	/* fonts */
+	--font-sans: "Ney";
+
+	--font-serif: "Canela-Light";
+
 	/* light theme */
 	--background: var(--white);
 	--foreground: var(--black);

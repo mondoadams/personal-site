@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@tailwindcss/ui": "^0.6.2",
+    "classnames": "^2.2.6",
     "next": "10.0.0",
     "next-themes": "^0.0.8",
     "postcss-import": "^13.0.0",

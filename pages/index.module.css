@@ -1,0 +1,6 @@
+.root {
+	@apply max-w-6xl m-auto;
+}
+
+[data-theme="dark"] .root {
+}

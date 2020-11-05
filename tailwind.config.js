@@ -1,4 +1,4 @@
-const plugin = require("tailwindcss/plugin")
+const defaultTheme = require("tailwindcss/defaultTheme")
 
 module.exports = {
 	future: {
@@ -24,6 +24,10 @@ module.exports = {
 			borderWidth: {
 				0.5: "0.5px",
 			},
+			fontFamily: {
+				sans: ["var(--font-sans)", ...defaultTheme.fontFamily.sans],
+				serif: ["var(--font-serif)", ...defaultTheme.fontFamily.serif],
+			},
 		},
 	},
 	variants: {
@@ -35,7 +39,6 @@ module.exports = {
 			"focus",
 			"dark-focus",
 		],
-		// backgroundColor: ({ after }) => after(["dark", "dark-hover", "dark-focus"]),
 		textColor: [
 			"responsive",
 			"hover",
@@ -53,33 +56,5 @@ module.exports = {
 			"dark-focus",
 		],
 	},
-	plugins: [
-		require("@tailwindcss/ui"),
-		require("tailwindcss-dark-mode")(),
-		// plugin(function ({ addVariant, e }) {
-		// 	addVariant("dark", ({ modifySelectors, separator }) => {
-		// 		modifySelectors(({ className }) => {
-		// 			return `html[data-theme="dark"] .${e(`dark${separator}${className}`)}`
-		// 		})
-		// 	})
-		// }),
-		// plugin(function ({ addVariant, e }) {
-		// 	addVariant("dark-hover", ({ modifySelectors, separator }) => {
-		// 		modifySelectors(({ className }) => {
-		// 			return `html[data-theme="dark"] .${e(
-		// 				`dark-hover${separator}${className}`
-		// 			)}:hover`
-		// 		})
-		// 	})
-		// }),
-		// plugin(function ({ addVariant, e }) {
-		// 	addVariant("dark-focus", ({ modifySelectors, separator }) => {
-		// 		modifySelectors(({ className }) => {
-		// 			return `html[data-theme="dark"] .${e(
-		// 				`dark-focus${separator}${className}`
-		// 			)}:focus`
-		// 		})
-		// 	})
-		// }),
-	],
+	plugins: [require("@tailwindcss/ui"), require("tailwindcss-dark-mode")()],
 }

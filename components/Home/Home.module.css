@@ -1,5 +1,8 @@
 .root {
+	@apply flex flex-col min-h-screen text-foreground bg-background font-serif;
 	justify-content: center;
 	align-items: center;
-	@apply flex flex-col min-h-screen text-foreground bg-background;
+	& h3 {
+		text-indent: 20%;
+	}
 }

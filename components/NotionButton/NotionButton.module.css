@@ -1,16 +1,37 @@
 .root {
 	@apply px-6 py-2
-    rounded-md
-    text-sm font-sans
+    rounded-sm
+    text-xs font-sans
     transition duration-200 ease-in-out
-    font-medium
-    shadow-md;
+	shadow-md
+	font-medium
+	border-0.5;
 
-	@apply bg-gray-100
-    text-gray-800;
+	@apply bg-white
+	text-gray-800
+	border-gray-100;
+
+	&:hover {
+		@apply border-gray-200 shadow-lg;
+	}
 }
 
 [data-theme="dark"] .root {
-	@apply bg-gray-800
-    text-blue-50;
+	@apply bg-gray-600
+	text-gray-50
+	border-gray-900;
+
+	&:hover {
+		@apply bg-gray-700;
+	}
+}
+
+.content {
+	@apply flex flex-row w-full items-center;
+	& svg {
+		@apply mr-1 fill-current;
+	}
+}
+
+[data-theme="dark"] .icon {
 }
