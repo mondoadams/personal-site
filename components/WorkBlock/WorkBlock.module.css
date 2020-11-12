@@ -1,27 +1,33 @@
 .root {
-	@apply w-52 h-52 p-4 bg-white text-foreground border-0.5 border-gray-400
-    flex flex-col;
-	& * {
-		@apply mb-2;
-	}
+	@apply border-t-0.5 border-gray-800;
+	transition: 0.2s;
+}
+
+.root:hover {
+	@apply bg-primary;
+}
+
+.content {
+	@apply max-w-6xl m-auto flex flex-row h-32 items-center;
 }
 
 .number {
-	@apply font-sans text-xl tracking-widest antialiased;
-	-webkit-text-stroke: 1px var(--foreground);
-	-webkit-text-fill-color: transparent;
+	@apply text-2xl mr-2;
 }
 
 .project {
-	@apply text-lg antialiased;
-	font-family: "Canela-Medium";
+	@apply text-5xl antialiased ml-10;
 }
 
 .client {
-	@apply text-base tracking-wide;
+	@apply text-base tracking-wide ml-auto text-right;
 	font-family: "Canela-LightItalic";
 }
 
 [data-theme="dark"] .root {
-	@apply bg-cool-gray-600 text-white;
+	@apply text-white border-gray-900;
+}
+
+[data-theme="dark"] .root:hover {
+	@apply bg-primary text-white;
 }

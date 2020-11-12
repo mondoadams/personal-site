@@ -69,8 +69,8 @@ a {
 }
 
 :root {
-	--white: #eeeeee;
-	--black: #040404;
+	--white: #f3f0ec;
+	--textblack: #232323;
 
 	/* fonts */
 	--font-sans: "Ney";
@@ -79,11 +79,15 @@ a {
 
 	/* light theme */
 	--background: var(--white);
-	--foreground: var(--black);
+	--foreground: var(--textblack);
+
+	--primary: #77855c;
+	--accent: #cb6a39;
+	--black: #0b0b0c;
 }
 
 [data-theme="dark"] {
 	/* dark theme */
-	--background: var(--black);
+	--background: var(--textblack);
 	--foreground: var(--white);
 }

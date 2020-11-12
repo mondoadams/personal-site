@@ -1,6 +1,7 @@
 .root {
-	@apply max-w-6xl m-auto;
+	@apply max-w-full text-foreground bg-background;
 }
 
 [data-theme="dark"] .root {
+	@apply bg-black;
 }

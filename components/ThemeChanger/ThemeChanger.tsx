@@ -8,14 +8,12 @@ export default function ThemeChanger() {
 	React.useEffect(() => setMounted(true), [])
 
 	if (!mounted) {
-		return <div>Skeleton of button here</div>
+		return <div>Loading...</div>
 	} else {
-		return (
-			<div>
-				<div>{theme}</div>
-				<button onClick={() => setTheme("light")}>Light Mode</button>
-				<button onClick={() => setTheme("dark")}>Dark Mode</button>
-			</div>
+		return theme === "light" ? (
+			<button onClick={() => setTheme("dark")}>Dark Mode</button>
+		) : (
+			<button onClick={() => setTheme("light")}>Light Mode</button>
 		)
 	}
 }

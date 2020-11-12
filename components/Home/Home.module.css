@@ -1,8 +1,14 @@
-.root {
-	@apply flex flex-col min-h-screen text-foreground bg-background font-serif;
+/* .root {
+	@apply flex flex-col;
 	justify-content: center;
 	align-items: center;
 	& h3 {
 		text-indent: 20%;
 	}
+} */
+.root {
+}
+
+.content {
+	@apply max-w-6xl w-full m-auto grid grid-cols-12 gap-8;
 }

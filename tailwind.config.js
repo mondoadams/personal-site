@@ -20,9 +20,13 @@ module.exports = {
 			colors: {
 				background: "var(--background)",
 				foreground: "var(--foreground)",
+				primary: "var(--primary)",
+				accent: "var(--accent)",
+				black: "var(--black)",
 			},
 			borderWidth: {
 				0.5: "0.5px",
+				1: "1px",
 			},
 			fontFamily: {
 				sans: ["var(--font-sans)", ...defaultTheme.fontFamily.sans],
