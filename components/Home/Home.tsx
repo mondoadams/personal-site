@@ -35,7 +35,7 @@ export default function Home() {
 						className={`text-foreground text-lg flex flex-row mb-10 tracking-wide`}
 					>
 						<p className={`pr-10`}>
-							Update text. I’m an independent designer and developer resource created by
+							Update text from master. I’m an independent designer and developer resource created by
 							Jeremiah Shoaf. The site gets over 350,000 unique visitors a
 							month; running it is expensive and time consuming. If you find
 							University of Cambridge, please consider supporting the site to
